@@ -44,25 +44,25 @@ class ResultTest {
     public void isResultCorrect(){
         List<Integer> capacity = new ArrayList<>(List.of(5,10,15));
 
-        List<Item> intance1 = new ArrayList<Item>(4);
-        intance1.add(new Item(6,2,0));
-        intance1.add(new Item(2,4,1));
-        intance1.add(new Item(8,4,2));
-        intance1.add(new Item(1,1,3));
+        List<Item> instance = new ArrayList<Item>(4);
+        instance.add(new Item(6,2,0));
+        instance.add(new Item(2,4,1));
+        instance.add(new Item(8,4,2));
+        instance.add(new Item(1,1,3));
 
         Problem problem = new Problem();
-        for(Item item : intance1){ problem.addItem(item); }
+        for(Item item : instance){ problem.addItem(item); }
 
         List<Item> result1 = new ArrayList<Item>(3);
-        for(int i = 0; i < 2; i++){ result1.add(intance1.get(0)); }
-        result1.add(intance1.get(3));
+        for(int i = 0; i < 2; i++){ result1.add(instance.get(0)); }
+        result1.add(instance.get(3));
 
         List<Item> result2 = new ArrayList<Item>(3);
-        for(int i = 0; i < 5; i++){ result2.add(intance1.get(0)); }
+        for(int i = 0; i < 5; i++){ result2.add(instance.get(0)); }
 
         List<Item> result3 = new ArrayList<Item>(3);
-        for(int i = 0; i < 7; i++){ result3.add(intance1.get(0)); }
-        result3.add(intance1.get(3));
+        for(int i = 0; i < 7; i++){ result3.add(instance.get(0)); }
+        result3.add(instance.get(3));
 
         List<Result> results = new ArrayList<Result>(3);
         results.add(new Result(result1));
